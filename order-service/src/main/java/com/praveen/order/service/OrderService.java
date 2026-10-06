@@ -1,0 +1,2 @@
+package com.praveen.order.service; import com.praveen.order.model.Order; import com.praveen.order.repository.OrderRepository; import org.springframework.stereotype.Service; import java.util.List;
+@Service public class OrderService {private final OrderRepository repo; public OrderService(OrderRepository repo){this.repo=repo;} public List<Order> all(){return repo.findAll();} public Order create(Order o){return repo.save(o);} }
